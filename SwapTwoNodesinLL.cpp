@@ -1,3 +1,4 @@
+/*
 Given a linked list, i & j, swap the nodes that are present at i & j position in the LL. You need to swap the entire nodes, not just the data.
 Indexing starts from 0. You don't need to print the elements, just swap and return the head of updated LL.
 Assume i & j given will be within limits. And i can be greater than j also.
@@ -18,6 +19,7 @@ Sample Input 2 :
 Sample Output 2 :
 3 4 6 2 5 1 9
 
+*/
 /* -------------------------------------------------------------------------------------------------------------------------------*/
 //head is the head of the linked list, n is number of elements to be reversed
 // Following is the node structure
