@@ -1,6 +1,4 @@
 def findMinDiff(self, A,N,M):
-
-        # code here
         i=0
         j=M-1
         d=float("inf")
