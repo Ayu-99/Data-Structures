@@ -68,6 +68,5 @@ int main(){
     cout<<s.pop()<<endl;
     cout<<s.isEmpty();
     return 0;
-
 }
 
