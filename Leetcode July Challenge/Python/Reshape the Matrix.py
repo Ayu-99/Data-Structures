@@ -1,3 +1,6 @@
+
+
+# Approach -1
 class Solution:
     def matrixReshape(self, mat: List[List[int]], r: int, c: int) -> List[List[int]]:
         rows = len(mat)
@@ -19,5 +22,7 @@ class Solution:
                 k+=1
         
         return new_matrix
+    
+    
         
         
