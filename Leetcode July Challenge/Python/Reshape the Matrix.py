@@ -24,5 +24,19 @@ class Solution:
         return new_matrix
     
     
+# Approach - 2
+rows = len(mat)
+cols = len(mat[0])
+if rows*cols < r*c or rows*cols > r*c:
+    return mat
+
+o = r*c
+new_matrix = [[0 for j in range(c)] for i in range(r)]
+for i in range(o):
+    new_matrix[i//c][i%c] = mat[i//cols][i%cols]
+
+return new_matrix
+    
+    
         
         
