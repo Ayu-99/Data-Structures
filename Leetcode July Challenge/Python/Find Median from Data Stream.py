@@ -16,7 +16,6 @@ class MedianFinder:
 
     def findMedian(self) -> float:
         has_even_count = len(self.max_heap) == len(self.min_heap)
-
         if has_even_count:
             return (-self.max_heap[0] + self.min_heap[0]) / 2.0
         return float(self.min_heap[0])
