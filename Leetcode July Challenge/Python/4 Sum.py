@@ -1,4 +1,8 @@
-result=[]
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        
+        
+        result=[]
         nums.sort()
         
         for i in range(len(nums)-3):
@@ -26,7 +30,5 @@ result=[]
                         l+=1
                     else:
                         r-=1
-                while j < len(nums)-3 and nums[j] == nums[j+1]:
-                    j+=1
-                j+=1       
+                     
         return result
