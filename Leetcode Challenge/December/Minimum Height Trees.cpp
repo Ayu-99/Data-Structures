@@ -12,7 +12,7 @@ public:
         
         queue<int> q;
         for(int i=0; i<n;i++){
-            if(indegree[i]==1) q.push(i), indegree[i]--; 
+            if(indegree[i]==1) q.push(i); 
         } 
         
         while(!q.empty()){
