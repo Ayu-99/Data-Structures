@@ -6,49 +6,29 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-#include<queue>
+
+
+class mycompare{
+	public:
+	bool operator()(const ListNode* a,const ListNode* b){
+        return (a->val>b->val);
+        }
+};
+	
 class Solution {
-public:
-    
-    ListNode* mergeKLists(vector<ListNode*>& lists) {
-        priority_queue<int, vector<int>, greater<int>> pq; //min heap
-        
-        if(lists.size()==0){
-            return NULL;
-        }
-        if(lists[0]==NULL && lists.size()==1){
-            return NULL;
-        }
+	public:
+	ListNode* mergeKLists(vector<ListNode*>& lists) {
+        ListNode *head=new ListNode(0);
+        ListNode *temp=head;
+        priority_queue<ListNode*,vector<ListNode*>,mycompare> pq;
         for(int i=0;i<lists.size();i++){
-            ListNode *head=lists[i];
-            if(head==NULL){
-                continue;
-            }
-            ListNode *temp=head;
-            while(temp!=NULL){
-                pq.push(temp->val);
-                temp=temp->next;
-            }
+            if(lists[i]!=NULL)
+             pq.push(lists[i]);
         }
-        
-        if(pq.size()==0){
-            return NULL;
-        }
-    
-        ListNode *newNode=new ListNode(pq.top());
-        pq.pop();
-        ListNode *finalHead=newNode;
-        ListNode *tail=finalHead;
+
         while(!pq.empty()){
-            ListNode *nextNode=new ListNode(pq.top());
-            pq.pop();
-            tail->next=nextNode;
-            tail=tail->next;
-            
-        }
-        
-        tail->next=NULL;
-        return finalHead;
-        
+            auto least=pq.top();
+           
+        return head->next;
     }
 };
