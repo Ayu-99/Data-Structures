@@ -9,13 +9,12 @@ public:
             countB[b] += 1;
             if (a == b) countSame[a] += 1;
         }
-        int ans = n;
+        int ans = -1
         for (int v = 1; v <= 6; v++) {
             if (countA[v] + countB[v] - countSame[v] == n) {
-                int minSwap = min(countA[v], countB[v]) - countSame[v];
-                ans = min(ans, minSwap);
+                int ans = min(countA[v], countB[v]) - countSame[v];              
             }
         }   
-        return ans == n ? -1 : ans;
+        return ans ;
     }
 };
