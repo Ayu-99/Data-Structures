@@ -15,7 +15,7 @@ class Solution {
 public:
     vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
      
-        priority_queue<pair<int,int>, vector<pair<int,int>>> max_heap;
+        priority_queue<pair<int,int>> max_heap;
    
         for(int i=0;i<mat.size();++i){
             max_heap.push({calculateSoldierCount(mat[i]),i});
