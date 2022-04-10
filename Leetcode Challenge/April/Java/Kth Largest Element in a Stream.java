@@ -8,6 +8,7 @@ class KthLargest {
             for (int n : a)
                 add(n);
         }
+}
 
         public int add(int n) {
             if (q.size() < k)
