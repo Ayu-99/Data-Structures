@@ -15,7 +15,7 @@ class Solution {
         if(s[0] == '-') sign = -1;
         
         int MAX = INT_MAX, MIN = INT_MIN;
-        i = (s[0] == '+' || s[0] == '-') ? 1 : 0;
+        i = (s[i] == '+' || s[0] == '-') ? 1 : 0;
 		
         while(i < s.length()) {
             if(s[0] == ' ' || !isdigit(s[i])) break;
