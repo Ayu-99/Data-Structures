@@ -41,7 +41,7 @@ public:
         int rPrE = preorderEnd;
         
         root->left = buildTree_helper(preorder, inorder, lPrS, lPrE, lInS, lInE);
-        root->right = buildTree_helper(preorder, inorder, rPrS, rPrE, rInS, rInE)q;
+        root->right = buildTree_helper(preorder, inorder, rPrS, rPrE, rInS, rInE);
         
         return root;
         
