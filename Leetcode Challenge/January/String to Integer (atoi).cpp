@@ -25,7 +25,7 @@ class Solution {
             if(sign == 1 && ans > MAX) return MAX;
             
             i++;
-        }q
+        }
         
         return (int)(sign*ans);
     }
