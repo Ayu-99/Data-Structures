@@ -24,3 +24,6 @@ public class BinarySearch {
         System.out.println(binarySearch(arr, target)); // Output: 3
     }
 }
+
+
+//Checkout my youtube channel where I solve DSA problems: https://www.youtube.com/@AyushiSharmaDSA/videos
