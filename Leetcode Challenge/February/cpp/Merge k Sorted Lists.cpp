@@ -28,7 +28,12 @@ class Solution {
 
         while(!pq.empty()){
             auto least=pq.top();
-           
+            pq.pop();
+            temp->next = least;
+            temp = temp->next;
+            if(least->next)
+                pq.push(least->next);
+        }
         return head->next;
     }
 };
