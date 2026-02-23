@@ -12,7 +12,7 @@
 class Solution {
 public:
     bool leafSimilar(TreeNode* root1, TreeNode* root2) {
-        sq
+        string t1,t2;
         DFS(root1, t1);
         DFS(root2, t2);
         return t1==t2;
