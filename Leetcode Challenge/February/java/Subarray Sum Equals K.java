@@ -5,7 +5,7 @@ public class Solution {
         
       
         for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
+            sum += nums[i]%2; //missing %2 to check even or not
             if(sum == k) count++;
             if (map.containsKey(sum - k))
                 count += map.get(sum - k);
